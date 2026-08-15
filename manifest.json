@@ -1,0 +1,9 @@
+{
+  "id": "vault-sync",
+  "name": "Vault Sync",
+  "version": "0.1.0",
+  "minAppVersion": "1.4.0",
+  "description": "Push settings, snippets, plugins and API keys from this umbrella vault down into the vaults nested inside it. Previews every change first and backs up anything it overwrites.",
+  "author": "Lionel Weng",
+  "isDesktopOnly": true
+}

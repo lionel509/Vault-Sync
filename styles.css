@@ -1,0 +1,51 @@
+.vault-sync-modal .vault-sync-summary {
+  color: var(--text-muted);
+  font-size: var(--font-ui-smaller);
+  margin-bottom: 10px;
+}
+
+.vault-sync-modal .vault-sync-list {
+  max-height: 320px;
+  overflow-y: auto;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-bottom: 12px;
+}
+
+.vault-sync-modal .vault-sync-list h4 {
+  margin: 8px 0 4px;
+}
+
+.vault-sync-modal .vault-sync-list ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.vault-sync-modal .vault-sync-list li {
+  font-size: var(--font-ui-smaller);
+}
+
+.vault-sync-modal .vault-sync-kind {
+  color: var(--text-faint);
+}
+
+.vault-sync-modal .vault-sync-overwrite {
+  color: var(--text-warning);
+}
+
+.vault-sync-modal .vault-sync-merge {
+  color: var(--text-accent);
+}
+
+.vault-sync-modal .vault-sync-warning {
+  color: var(--text-warning);
+  font-size: var(--font-ui-smaller);
+  margin-bottom: 12px;
+}
+
+.vault-sync-modal .vault-sync-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
