@@ -18,7 +18,7 @@ This plugin's whole risk profile is that it writes into vaults you aren't lookin
 - **Everything lands inside `<vault>/.obsidian/`.** No planned write escapes that path.
 - **Vaults can be excluded permanently.** The exclusion list is checked inside `plan()`,
   not merely defaulted in settings — naming an excluded vault as an explicit target still
-  produces zero writes. Verified by test. Edit `ALWAYS_EXCLUDED` in `src/main.ts` to set
+  produces zero writes. Edit `ALWAYS_EXCLUDED` in `src/main.ts` to set
   your own.
 - **Some files are never copied** — `workspace.json` and `workspaces.json` (window
   layout), and `graph.json`, since a vault's graph colours are usually its own.
@@ -81,6 +81,14 @@ Then reload the vault and enable **Vault Sync** in Community Plugins.
   differ. Comparing first would make previews much quieter.
 - **Enabled-plugin lists are risky.** Syncing `community-plugins.json` into a vault that
   lacks one of those plugins leaves it referencing something that isn't installed.
+
+## Cleanup
+
+`.gitignore` covers what this repo generates (`node_modules/`, `graphify-out/`, secrets,
+logs, editor droppings) — `main.js` stays tracked. [CLEANUP.md](CLEANUP.md) has the
+preview/clean commands and, since this plugin writes into other vaults, the three
+things that live outside the repo: the umbrella install, what was pushed into leaf
+vaults, and the `.vault-sync-backup/` directories.
 
 ## License
 
