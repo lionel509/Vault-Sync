@@ -7,3 +7,37 @@ node_modules/
 
 # graphify output — rebuilt with `graphify update .`, never versioned
 graphify-out/
+
+# --- cleanup (issue #1) -------------------------------------------------
+# Secrets — never committed, and deliberately KEPT by the cleanup commands in
+# CLEANUP.md. This plugin's subject matter is credentials, so these rules are
+# not a formality: nothing that looks like a key belongs in this repo.
+.env
+.env.*
+*.key
+*.pem
+credentials.json
+secrets.json
+
+# Any local Python (none today) and virtualenvs
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Logs, editor and OS droppings
+*.log
+logs/
+.idea/
+.vscode/
+*.swp
+*.tsbuildinfo
+coverage/
+
+# NOTE: main.js is BUILD OUTPUT but committed on purpose — Obsidian loads it
+# off disk, so a user installs by copying files, never by running npm.
